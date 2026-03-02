@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AMT Console GUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --purple-main: #9b5cff;
+            --purple-glow: #b87cff;
+            --purple-dark: #12081f;
+            --card-bg: rgba(30, 15, 55, 0.75);
+            --border-glow: rgba(155, 92, 255, 0.4);
+            --text-main: #e9ddff;
+            --text-muted: #bda6ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", system-ui, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle at top, #2a0f4f, #0b0415 70%);
+            color: var(--text-main);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            background: rgba(10, 5, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: var(--purple-main);
+            text-shadow: 0 0 12px var(--purple-glow);
+        }
+
+        nav .links a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--text-main);
+            padding: 10px 18px;
+            border-radius: 999px;
+            transition: all 0.25s ease;
+        }
+
+        nav .links a:hover {
+            background: var(--purple-main);
+            box-shadow: 0 0 18px var(--purple-glow);
+        }
+
+        .hero {
+            padding: 80px 8%;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px var(--purple-glow);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            max-width: 900px;
+        }
+
+        .buttons {
+            margin-top: 35px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #ffffff, #9b5cff);
+            color: black;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 0 25px var(--purple-glow);
+            transition: transform 0.2s ease;
+        }
+
+        .action-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .action-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+            flex-shrink: 0;
+        }
+
+        .section {
+            padding: 70px 8%;
+        }
+
+        .section h3 {
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            text-shadow: 0 0 18px var(--purple-glow);
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 24px;
+            border: 1px solid var(--border-glow);
+            box-shadow: 0 0 25px rgba(155, 92, 255, 0.15);
+        }
+
+        .card h4 {
+            margin-top: 0;
+            color: var(--purple-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .long-text {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #9d8ccf;
+            border-top: 1px solid var(--border-glow);
+            background: rgba(10, 5, 20, 0.7);
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h1>AMT Console GUI</h1>
+    <div class="links">
+        <a href="purchase.html">Purchase</a>
+        <a href="connectdiscord.html">Connect Discord</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h2>Next-Gen Gorilla Tag Admin GUI</h2>
+    <p>
+        AMT is a powerful console-driven admin GUI designed specifically for
+        Gorilla Tag projects. Built with performance, clarity, and control
+        in mind, our system allows developers and advanced users to execute
+        commands, manage features, and integrate mod menus seamlessly —
+        without clutter or instability.
+    </p>
+
+    <div class="buttons">
+        <a href="purchase.html" class="action-btn">
+            <svg viewBox="0 0 24 24">
+                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.45a2 2 0 0 0 1.75 2.96h9v-2h-9l1.1-2h6.45a2 2 0 0 0 1.8-1.1l3.58-6.49a1 1 0 0 0-.9-1.49h-14.31z"/>
+            </svg>
+            Purchase Access
+        </a>
+
+        <a href="connectdiscord.html" class="action-btn">
+            <svg viewBox="0 0 71 55">
+                <path d="M60.104 4.552A58.7 58.7 0 0046.8.56a41.18 41.18 0 00-1.986 4.083 55.254 55.254 0 00-13.628 0 41.038 41.038 0 00-1.986-4.083 58.533 58.533 0 00-13.304 3.992C8.983 19.444 2.988 34.121 4.576 48.576A61.46 61.46 0 0018.5 54.27a45.165 45.165 0 003.97-6.467 39.894 39.894 0 01-6.967-3.463c.583-.41 1.16-.845 1.71-1.31 13.54 6.22 28.258 6.22 41.716 0 .55.464 1.127.9 1.71 1.31a39.712 39.712 0 01-6.967 3.463 45.19 45.19 0 003.97 6.467 61.257 61.257 0 0013.923-5.696c1.617-14.456-4.378-29.133-14.692-43.024z"/>
+            </svg>
+            Join Discord
+        </a>
+    </div>
+</section>
+
+<section class="section">
+    <h3>What We Do</h3>
+    <div class="cards">
+        <div class="card">
+            <h4>Custom Admin Console GUI</h4>
+            <p>Fast, command-based admin control with clean output and reliable execution.</p>
+        </div>
+        <div class="card">
+            <h4>Seamless Mod Menu Integration</h4>
+            <p>Designed to work alongside existing mod menus without conflicts.</p>
+        </div>
+        <div class="card">
+            <h4>Clean UI & Performance</h4>
+            <p>Optimized visuals and minimal overhead for smooth gameplay.</p>
+        </div>
+        <div class="card">
+            <h4>Ongoing Updates</h4>
+            <p>Frequent updates and active support to stay compatible and secure.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h3>How It Works</h3>
+    <div class="long-text">
+        <p>
+            AMT Console GUI is built for creators who want full control without
+            unnecessary complexity. Our system operates through a structured
+            command console, allowing precise execution of admin actions, feature
+            toggles, and integrations directly within your Gorilla Tag setup.
+        </p>
+        <p>
+            Unlike traditional menus that rely solely on buttons, our console-based
+            approach provides flexibility, speed, and expandability. Commands can
+            be customized, extended, and mapped to your project’s specific needs.
+        </p>
+        <p>
+            Whether you're managing a private environment, testing mechanics,
+            developing mods, or maintaining a polished experience, AMT delivers
+            a professional-grade solution built to scale with your project.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 AMT Services — All Rights Reserved
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect Discord | AMT Console GUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --purple-main: #9b5cff;
+            --purple-glow: #b87cff;
+            --card-bg: rgba(30, 15, 55, 0.85);
+            --border-glow: rgba(155, 92, 255, 0.4);
+            --text-main: #e9ddff;
+            --text-muted: #bda6ff;
+        }
+
+        * { box-sizing: border-box; font-family: "Segoe UI", system-ui, sans-serif; }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle at top, #2a0f4f, #0b0415 70%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            background: rgba(10, 5, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: var(--purple-main);
+            text-shadow: 0 0 12px var(--purple-glow);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            padding: 10px 18px;
+            border-radius: 999px;
+            transition: all 0.25s ease;
+        }
+
+        nav a:hover {
+            background: var(--purple-main);
+            box-shadow: 0 0 18px var(--purple-glow);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 8%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 28px;
+            padding: 50px;
+            max-width: 480px;
+            text-align: center;
+            border: 1px solid var(--border-glow);
+            box-shadow: 0 0 40px rgba(155, 92, 255, 0.35);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 2.2rem;
+            text-shadow: 0 0 18px var(--purple-glow);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 34px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #ffffff, #9b5cff);
+            color: black;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 0 30px rgba(155, 92, 255, 0.9);
+            transition: transform 0.2s ease;
+        }
+
+        .discord-btn:hover {
+            transform: scale(1.08);
+        }
+
+        .discord-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+            filter: drop-shadow(0 0 6px var(--purple-glow));
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #9d8ccf;
+            border-top: 1px solid var(--border-glow);
+            background: rgba(10, 5, 20, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            .card { padding: 35px 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h1>AMT Console GUI</h1>
+    <a href="index.html">← Back to Home</a>
+</nav>
+
+<main>
+    <div class="card">
+        <h2>Join Our Discord</h2>
+        <p>
+            Connect with the AMT community to receive updates, announcements,
+            support, and early access to new features. Our Discord is the
+            primary hub for news and assistance.
+        </p>
+
+        <a class="discord-btn" href="https://discord.gg/6PAY49SJ" target="_blank">
+            <!-- Inline white Discord logo -->
+            <svg viewBox="0 0 71 55" xmlns="http://www.w3.org/2000/svg">
+                <path fill="white" d="M60.104 4.552A58.7 58.7 0 0046.8.56a41.18 41.18 0 00-1.986 4.083 55.254 55.254 0 00-13.628 0 41.038 41.038 0 00-1.986-4.083 58.533 58.533 0 00-13.304 3.992C8.983 19.444 2.988 34.121 4.576 48.576A61.46 61.46 0 0018.5 54.27a45.165 45.165 0 003.97-6.467 39.894 39.894 0 01-6.967-3.463c.583-.41 1.16-.845 1.71-1.31 13.54 6.22 28.258 6.22 41.716 0 .55.464 1.127.9 1.71 1.31a39.712 39.712 0 01-6.967 3.463 45.19 45.19 0 003.97 6.467 61.257 61.257 0 0013.923-5.696c1.617-14.456-4.378-29.133-14.692-43.024zm-37.39 31.77c-2.59 0-4.724-2.377-4.724-5.304s2.096-5.303 4.724-5.303c2.632 0 4.755 2.376 4.724 5.303 0 2.927-2.092 5.304-4.724 5.304zm27.59 0c-2.59 0-4.724-2.377-4.724-5.304s2.096-5.303 4.724-5.303c2.632 0 4.755 2.376 4.724 5.303 0 2.927-2.092 5.304-4.724 5.304z"/>
+            </svg>
+            Connect to Discord
+        </a>
+    </div>
+</main>
+
+<footer>
+    © 2026 AMT Services — All Rights Reserved
+</footer>
+
+</body>
+</html>

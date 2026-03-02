@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Purchase | AMT Console GUI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --purple-main: #9b5cff;
+            --purple-glow: #b87cff;
+            --card-bg: rgba(30, 15, 55, 0.85);
+            --border-glow: rgba(155, 92, 255, 0.4);
+            --text-main: #e9ddff;
+            --text-muted: #bda6ff;
+        }
+
+        * { box-sizing: border-box; font-family: "Segoe UI", system-ui, sans-serif; }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle at top, #2a0f4f, #0b0415 70%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            background: rgba(10, 5, 20, 0.6);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: var(--purple-main);
+            text-shadow: 0 0 12px var(--purple-glow);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            padding: 10px 18px;
+            border-radius: 999px;
+            transition: all 0.25s ease;
+        }
+
+        nav a:hover {
+            background: var(--purple-main);
+            box-shadow: 0 0 18px var(--purple-glow);
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 8%;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 28px;
+            padding: 50px;
+            max-width: 480px;
+            text-align: center;
+            border: 1px solid var(--border-glow);
+            box-shadow: 0 0 40px rgba(155, 92, 255, 0.35);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 2.2rem;
+            text-shadow: 0 0 18px var(--purple-glow);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .purchase-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 34px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #ffffff, #9b5cff);
+            color: black;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 0 30px rgba(155, 92, 255, 0.9);
+            transition: transform 0.2s ease;
+        }
+
+        .purchase-btn:hover {
+            transform: scale(1.08);
+        }
+
+        .purchase-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: white;
+            filter: drop-shadow(0 0 6px var(--purple-glow));
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #9d8ccf;
+            border-top: 1px solid var(--border-glow);
+            background: rgba(10, 5, 20, 0.7);
+        }
+
+        @media (max-width: 600px) {
+            .card { padding: 35px 25px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <h1>AMT Console GUI</h1>
+    <a href="index.html">← Back to Home</a>
+</nav>
+
+<main>
+    <div class="card">
+        <h2>Purchase AMT Console GUI</h2>
+        <p>
+            Gain full access to the AMT Console GUI — a powerful, optimized
+            admin console built for Gorilla Tag projects. Control commands,
+            mod integrations, and features seamlessly.
+        </p>
+
+        <a class="purchase-btn" href="#">
+            <!-- Inline shopping cart -->
+            <svg viewBox="0 0 24 24">
+                <path d="M7 4h-2l-1 2h2l3.6 7.59-1.35 2.45a2 2 0 0 0 1.75 2.96h9v-2h-9l1.1-2h6.45a2 2 0 0 0 1.8-1.1l3.58-6.49a1 1 0 0 0-.9-1.49h-14.31z"/>
+            </svg>
+            Purchase Now
+        </a>
+    </div>
+</main>
+
+<footer>
+    © 2026 AMT Services — All Rights Reserved
+</footer>
+
+</body>
+</html>
